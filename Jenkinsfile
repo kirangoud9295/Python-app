@@ -7,7 +7,7 @@ pipeline {
 
         stage('Build docker image') {
             steps {  
-                sh ' docker build -t kirangoud9295/pythonapp:$BUILD_NUMBER .'
+                sh ' docker build -t kirangoud92/pythonapp:$BUILD_NUMBER .'
             }
         }
         stage('login to dockerhub') {
@@ -17,7 +17,7 @@ pipeline {
         }
         stage('push image') {
             steps{
-                sh ' docker push kirangoud9295/pythonapp:$BUILD_NUMBER'
+                sh ' docker push kirangoud92/pythonapp:$BUILD_NUMBER'
             }
         }
 }
